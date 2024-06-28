@@ -107,7 +107,7 @@ export class Project {
 export class Group {
     name
     listOfTodo = []
-    isDone = false
+    isDone = true
     project
 
 
