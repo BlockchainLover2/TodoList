@@ -1,4 +1,4 @@
-import {App, Group, Project, TodoItem} from "./app.js"
+import {App, Project} from "./app.js"
 import {createListOfTodos} from "./container"
 import {createModal} from "./modal-creator";
 
