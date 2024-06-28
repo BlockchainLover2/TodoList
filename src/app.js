@@ -39,7 +39,6 @@ class App{
             }
             this.listOfProject.push(project)
         }
-        console.log(this.listOfProject[0])
     }
 
     saveData(){

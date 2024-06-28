@@ -25,7 +25,6 @@ const createProjects = ()=> {
         let button = document.createElement("button");
         button.textContent = "X"
         button.classList.add("remove")
-        console.log(value)
         button.addEventListener("click",()=>clickProjectButton("Remove Project",value))
         tempProject.appendChild(button)
         projectListDiv.appendChild(tempProject)

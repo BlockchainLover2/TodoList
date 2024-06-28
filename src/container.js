@@ -9,7 +9,7 @@ const { differenceInHours } = require("date-fns");
 
 export let createListOfTodos = (project) =>{
     container.innerHTML = ``
-    if(project === null)
+    if(project === null || project === undefined)
         return
 
     checkIfDone(project,container)
@@ -83,7 +83,6 @@ let createItem = (todo,groupDiv) =>{
 }
 
 let checkIfDone = (projectOrGroup,div) => {
-
     if(projectOrGroup.isDone){
         div.classList.add("done")
     }
