@@ -26,7 +26,6 @@ class App{
                 this.listOfProject.push(new Project("",this))
                 continue
             }
-
             let project = new Project(tempProject.name,this)
             for (const tempGroup of tempProject.listOfGroups) {
                 let group = new Group(tempGroup.name,project)
@@ -67,6 +66,7 @@ class App{
             this.listOfProject.splice(index, 1)
             if(this.selectedProject === project)
                 this.selectedProject = null
+            this.saveData()
         }
     }
 
@@ -75,8 +75,8 @@ class App{
 }
 export class Project {
     name
-    listOfGroups
-    isDone
+    listOfGroups = []
+    isDone = true
     app
 
     constructor(name,app) {
@@ -107,7 +107,7 @@ export class Project {
 }
 export class Group {
     name
-    listOfTodo
+    listOfTodo = []
     isDone = false
     project
 
